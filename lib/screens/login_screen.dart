@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_conferencing_app/resources/auth_methods.dart';
 import 'package:video_conferencing_app/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -9,6 +10,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final AuthMethods _authMethods = AuthMethods();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
-            'Login In or sign up',
+            'Login In or Sign Up',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -28,7 +31,12 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           CustomButton(
             text: 'Sign In with Google',
-            onPressed: () {},
+            onPressed: () async {
+              bool res = await _authMethods.signInWithGoogle(context);
+              if (res) {
+                Navigator.pushNamed(context, '/home');
+              }
+            },
           ),
         ],
       ),

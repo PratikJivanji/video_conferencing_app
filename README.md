@@ -1,16 +1,13 @@
 # video_conferencing_app
 
-A new Flutter project.
+## Tech/frameworks used
+- Flutter
+- Dart
+- Firebase
 
 ## Getting Started
+Create a firebase project at `https://firebase.google.com/`, and create two apps for android and IOS.
+The android app will require an SHA-1 certificate.
+For android add the `google-services.json` to `android\app`
+For IOS add the `GoogleService-Info.plist` to `ios\Runner`
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
