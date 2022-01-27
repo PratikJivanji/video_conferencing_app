@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:video_conferencing_app/resources/auth_methods.dart';
 import 'package:video_conferencing_app/screens/home_screen.dart';
 import 'package:video_conferencing_app/screens/login_screen.dart';
+import 'package:video_conferencing_app/screens/video_call_screen.dart';
 import 'package:video_conferencing_app/utils/colors.dart';
 
 void main() async {
@@ -14,7 +15,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
+        '/video-call': (context) => const VideoCallScreen(),
       },
       home: StreamBuilder(
         stream: AuthMethods().authChanges,
