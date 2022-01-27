@@ -24,8 +24,10 @@ class MeetingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             HomeMeetingButton(
               onPressed: createNewMeeting,
@@ -39,17 +41,7 @@ class MeetingScreen extends StatelessWidget {
             ),
           ],
         ),
-        const Expanded(
-          child: Center(
-            child: Text(
-              'Create/Join Meetings with just a click!',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
-          ),
-        ),
+        Spacer(),
       ],
     );
   }
