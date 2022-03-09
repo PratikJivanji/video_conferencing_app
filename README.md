@@ -1,4 +1,4 @@
-# video_conferencing_app
+# Video Conferencing App
 
 A zoom like app for video conferencing.
 
@@ -9,7 +9,7 @@ A zoom like app for video conferencing.
 - Jitsi Meet
 
 ## Getting Started
-Create a firebase project at [firebase](https://firebase.google.com/), and create two apps for android and IOS.
+Create a firebase project at [firebase](https://firebase.google.com/), and create two apps for android and IOS with google auth.
 
 The android app will require an SHA-1 certificate.
 
